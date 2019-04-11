@@ -179,7 +179,7 @@ state_elev state_EMERGENCYSTOP(){
 
 	//Elevator has stopped between floors
 	else if(current_floor == -1){
-        hw_door_closer();
+        	hw_door_closer();
 		elev_set_stop_lamp(0);
 		state = idle;
 

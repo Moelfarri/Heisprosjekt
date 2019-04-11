@@ -1,7 +1,7 @@
 #pragma once
 
 
-//typedef enum states {state_INIT,state_IDLE,state_OPENDOOR,state_MOVE,state_EMERGENCY_STOP} state_t;
+//Different states of our Finite State Machine
 typedef enum states {idle, move, door,emergencystop} state_elev;
 
 state_elev state_INIT();

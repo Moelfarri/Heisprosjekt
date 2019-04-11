@@ -7,10 +7,10 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-//used for move state
+//used to determine the direction for move state
 int dir;
 
-//used for emergencystop state
+//used for emergencystop state to reset to move correctly after a stop situation
 state_elev prev_state;
 
 

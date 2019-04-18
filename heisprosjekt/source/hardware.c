@@ -30,31 +30,6 @@ void hw_order_light_outside(int flr) {
 	if(current_floor != -1){elev_set_floor_indicator(flr);}
 }
 
-void hw_turn_on_button_light(int flr, int dir) {
-	if (dir > 0) {
-		elev_set_button_lamp(BUTTON_CALL_UP, flr, 1);
-	}
-	else if (dir == 0) {
-		elev_set_button_lamp(BUTTON_COMMAND, flr, 1);
-	}
-	else if (dir < 0) {
-		elev_set_button_lamp(BUTTON_CALL_DOWN, flr, 1);
-	}
-}
-
-void hw_turn_off_button_light(int flr, int dir) {
-	if (dir > 0) {
-		elev_set_button_lamp(BUTTON_CALL_UP, flr, 1);
-	}
-	else if (dir == 0) {
-		elev_set_button_lamp(BUTTON_COMMAND, flr, 1);
-	}
-	else if (dir < 0) {
-		elev_set_button_lamp(BUTTON_CALL_DOWN, flr, 1);
-	}
-}
-
-
 void hw_scan_floor(){
 	int current_floor = hw_floor_sensor_read();
 	if(current_floor != -1){ scanned_floor = current_floor;}

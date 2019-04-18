@@ -15,7 +15,7 @@ state_elev prev_state;
 
 
 
-
+// puts the elevator in the idle state
 state_elev state_INIT(){
 	elev_init();
 	if(!(elev_init())) {
@@ -35,7 +35,7 @@ state_elev state_INIT(){
 }
 
 
-
+// stays in the idle state unless there is an order
 state_elev state_IDLE(){
 	if(q_has_order()){
 		return move;
@@ -46,7 +46,7 @@ state_elev state_IDLE(){
 
 
 
-
+// executes the orders
 state_elev state_MOVE(){
 	int current_floor = hw_floor_sensor_read();
 	hw_order_light_outside(current_floor);
@@ -81,7 +81,7 @@ state_elev state_MOVE(){
 				}
 			}
 		}
-
+		//if the elevator hits a floor, it checks if it should stop
 		if (q_should_stop_at_floor(scanned_floor)){
 				state = door;
 		}
